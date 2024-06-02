@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lewiden Landscapes</title>
+    <link rel="stylesheet" href="styles2.css">
+    <script defer src="news.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Lewiden Landscapes</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#flowers">Flowers</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="container">
+            <h2>Welcome to Lewiden Landscapes</h2>
+            <p>Beautiful flowers and stunning landscapes, tailored just for you.</p>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We are passionate about flowers and landscape architecture. Learn more about our story and team.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Flower Arrangements</li>
+                <li>Landscape Design</li>
+                <li>Garden Maintenance</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Flowers Section -->
+    <section id="flowers">
+        <div class="container">
+            <h2>Our Flowers</h2>
+            <p>Browse our selection of beautiful flowers and plants.</p>
+            <div class="products">
+                <div class="product" data-product="Roses" data-price="20">
+                    <h3></h3>
+                    <p>A variety of vibrant roses.</p>
+                    <p>Price: sh20</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="like-button">Like <span class="like-count">0</span></button>
+                </div>
+                <div class="product" data-product="Tulips" data-price="15">
+                    <h3>Fern</h3>
+                    <p>Colorful tulips for any occasion.</p>
+                     <img src="images/fern58.jpg" alt="Fern">
+                    <p>Price: sh15</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="like-button">Like <span class="like-count">0</span></button>
+                </div>
+                <!-- Add more product divs as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Our Projects</h2>
+            <p>Explore our previous landscape design projects.</p>
+            <div class="gallery">
+                <div class="project">
+                    <h3>Modern Garden</h3>
+                    <img src="images2/landscape11.jpg" alt="Modern Garden">
+                    <img src="images2/landscape6.jpg" alt="Modern Garden">
+                    <p>A contemporary garden design.</p>
+                </div>
+                <div class="project">
+                    <h3>Classic Landscape</h3>
+                    <img src="images2/landscape10.jpg" alt="Classic Landscape">
+                    <img src="images2/landscape7.jpg" alt="Classic Landscape">
+                    <img src="images2/landscape3.jpg" alt="Classic Landscape">
+                    <p>A timeless landscape design.</p>
+                </div>
+                <!-- Add more project divs as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart">
+        <div class="container">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items">
+                <!-- Cart items will be added here dynamically -->
+            </ul>
+            <p>Total: sh<span id="cart-total">0</span></p>
+            <button id="checkout">Checkout</button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="#">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Lewiden Landscapes. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
