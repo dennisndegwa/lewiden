@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lewiden Landscapers & Nurseries | Luxury Landscape Architecture & Plant Nursery Nairobi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --forest-green: #1E352F;
+            --forest-green-light: #2A4941;
+            --warm-sand: #F4F1EA;
+            --warm-sand-dark: #E6E1D3;
+            --charcoal: #2D312E;
+            --muted-gold: #D4AF37;
+            --muted-gold-dark: #B3922B;
+            --white: #FFFFFF;
+            --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--warm-sand);
+            color: var(--charcoal);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--forest-green);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 28px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .btn-gold {
+            background-color: var(--muted-gold);
+            color: var(--forest-green);
+        }
+
+        .btn-gold:hover {
+            background-color: var(--muted-gold-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--warm-sand);
+            border: 1px solid var(--warm-sand);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--warm-sand);
+            color: var(--forest-green);
+            transform: translateY(-2px);
+        }
+
+        .btn-forest {
+            background-color: var(--forest-green);
+            color: var(--warm-sand);
+        }
+
+        .btn-forest:hover {
+            background-color: var(--forest-green-light);
+            transform: translateY(-2px);
+        }
+
+        .btn-sm {
+            padding: 10px 16px;
+            font-size: 12px;
+            width: 100%;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(244, 241, 234, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--warm-sand-dark);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 90px;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--forest-green);
+            letter-spacing: -0.5px;
+        }
+
+        .logo-sub {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--muted-gold-dark);
+            font-weight: 600;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-link {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--charcoal);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--muted-gold-dark);
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--forest-green);
+        }
+
+         .hero {
+            position: relative;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(30, 53, 47, 0.75), rgba(30, 53, 47, 0.65)), url('https://images.unsplash.com/photo-1558904541-efa873a87679?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;
+            color: var(--warm-sand);
+            padding: 80px 0;
+            text-align: left;
+        }
+
+        .hero-bg-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 750px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background-color: rgba(212, 175, 55, 0.2);
+            color: var(--muted-gold);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            padding: 6px 16px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-radius: 20px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 5vw, 64px);
+            font-weight: 800;
+            color: var(--warm-sand);
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: clamp(16px, 2vw, 18px);
+            font-weight: 300;
+            color: var(--warm-sand-dark);
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px auto;
+        }
+
+        .section-subtitle {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--muted-gold-dark);
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .section-title {
+            font-size: clamp(28px, 3.5vw, 40px);
+            font-weight: 700;
+            color: var(--forest-green);
+        }
+
+        .services-section {
+            padding: 100px 0;
+            background-color: var(--white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+        }
+
+        .service-card {
+            background-color: var(--warm-sand);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--warm-sand-dark);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(30, 53, 47, 0.08);
+            border-color: var(--muted-gold);
+        }
+
+        .service-img-wrapper {
+            height: 220px;
+            width: 100%;
+            overflow: hidden;
+            background-color: var(--warm-sand-dark);
+        }
+
+        .service-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-img-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .service-body {
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--forest-green);
+            color: var(--muted-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 20px;
+            margin-bottom: 20px;
+            margin-top: -55px;
+            position: relative;
+            z-index: 2;
+            border: 3px solid var(--warm-sand);
+        }
+
+        .service-body h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .service-body p {
+            font-size: 14px;
+            color: var(--charcoal);
+            opacity: 0.85;
+            line-height: 1.6;
+        }
+
+        /* Plant Shop Section Styles */
+        .plant-shop-section {
+            padding: 100px 0;
+            background-color: var(--white);
+            border-top: 1px solid var(--warm-sand-dark);
+        }
+
+        .plant-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .plant-card {
+            background-color: var(--warm-sand);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--warm-sand-dark);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .plant-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(30, 53, 47, 0.08);
+            border-color: var(--muted-gold);
+        }
+
+        .plant-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background-color: var(--forest-green);
+            color: var(--muted-gold);
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 4px;
+            z-index: 2;
+            letter-spacing: 1px;
+        }
+
+        .plant-img-wrapper {
+            height: 220px;
+            width: 100%;
+            overflow: hidden;
+            background-color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+        }
+
+        .plant-img-wrapper img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: var(--transition);
+        }
+
+        .plant-card:hover .plant-img-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .plant-body {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: space-between;
+        }
+
+        .plant-body h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .plant-price {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--muted-gold-dark);
+            margin-bottom: 12px;
+        }
+
+        .plant-body p {
+            font-size: 13px;
+            color: var(--charcoal);
+            opacity: 0.85;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .order-summary-box {
+            background-color: var(--forest-green);
+            color: var(--warm-sand);
+            border-radius: 10px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            box-shadow: 0 10px 30px rgba(30, 53, 47, 0.15);
+        }
+
+        .order-summary-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            padding-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .order-summary-header h3 {
+            color: var(--warm-sand);
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .item-counter-badge {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--warm-sand-dark);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .selected-items-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-height: 250px;
+            overflow-y: auto;
+            padding-right: 5px;
+        }
+
+        .empty-cart-text {
+            color: var(--warm-sand-dark);
+            opacity: 0.7;
+            font-style: italic;
+            font-size: 14px;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .cart-item-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 12px 16px;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .cart-item-details {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .cart-item-name {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--warm-sand);
+        }
+
+        .cart-item-price {
+            font-size: 12px;
+            color: var(--muted-gold);
+        }
+
+        .cart-item-controls {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .qty-btns {
+            display: flex;
+            align-items: center;
+            background-color: rgba(0,0,0,0.2);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .qty-btn {
+            background: none;
+            border: none;
+            color: var(--warm-sand);
+            width: 28px;
+            height: 28px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: var(--transition);
+        }
+
+        .qty-btn:hover {
+            background-color: var(--muted-gold);
+            color: var(--forest-green);
+        }
+
+        .qty-display {
+            font-size: 13px;
+            font-weight: 600;
+            padding: 0 8px;
+            color: var(--warm-sand);
+        }
+
+        .remove-item-btn {
+            background: none;
+            border: none;
+            color: #ff6b6b;
+            cursor: pointer;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .remove-item-btn:hover {
+            color: #ff4757;
+        }
+
+        .order-summary-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            padding-top: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .total-price-display {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--warm-sand);
+        }
+
+        .total-price-display span {
+            color: var(--muted-gold);
+        }
+        /* End Plant Shop Styles */
+
+        .locations-section {
+            padding: 100px 0;
+            background-color: var(--warm-sand);
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+        }
+
+        .location-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            padding: 40px 32px;
+            border: 1px solid var(--warm-sand-dark);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .location-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--muted-gold);
+        }
+
+        .location-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(30, 53, 47, 0.05);
+        }
+
+        .location-tag {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--muted-gold-dark);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .location-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .location-details {
+            margin-bottom: 24px;
+        }
+
+        .location-details li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 14px;
+            margin-bottom: 12px;
+            color: var(--charcoal);
+            opacity: 0.9;
+        }
+
+        .location-details i {
+            color: var(--forest-green);
+            margin-top: 3px;
+        }
+
+        .gallery-section {
+            padding: 100px 0;
+            background-color: var(--forest-green);
+            color: var(--warm-sand);
+        }
+
+        .gallery-section .section-title {
+            color: var(--warm-sand);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+
+        .gallery-card {
+            background-color: var(--forest-green-light);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            border-color: var(--muted-gold);
+        }
+
+        .gallery-img {
+            height: 240px;
+            width: 100%;
+            overflow: hidden;
+            background-color: #12201C;
+        }
+
+        .gallery-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-card:hover .gallery-img img {
+            transform: scale(1.08);
+        }
+
+        .gallery-content {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: space-between;
+        }
+
+        .gallery-content h4 {
+            font-size: 18px;
+            color: var(--warm-sand);
+            margin-bottom: 8px;
+        }
+
+        .gallery-content p {
+            font-size: 13px;
+            color: var(--warm-sand-dark);
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+
+        .contact-section {
+            padding: 100px 0;
+            background-color: var(--warm-sand);
+        }
+
+        .contact-wrapper {
+            background-color: var(--white);
+            border-radius: 12px;
+            border: 1px solid var(--warm-sand-dark);
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(30, 53, 47, 0.05);
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+        }
+
+        @media (max-width: 900px) {
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .contact-info-side {
+            background-color: var(--forest-green);
+            color: var(--warm-sand);
+            padding: 50px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .contact-info-side h3 {
+            color: var(--warm-sand);
+            font-size: 26px;
+            margin-bottom: 16px;
+        }
+
+        .contact-info-side p {
+            color: var(--warm-sand-dark);
+            opacity: 0.9;
+            font-size: 14px;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .info-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 24px;
+            font-size: 14px;
+        }
+
+        .info-list i {
+            color: var(--muted-gold);
+            font-size: 18px;
+            margin-top: 3px;
+        }
+
+        .contact-form-side {
+            padding: 50px 40px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--charcoal);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid var(--warm-sand-dark);
+            background-color: var(--warm-sand);
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: var(--charcoal);
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--forest-green);
+            background-color: var(--white);
+            box-shadow: 0 0 0 3px rgba(30, 53, 47, 0.1);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        footer {
+            background-color: #12201C;
+            color: var(--warm-sand-dark);
+            padding: 60px 0 30px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--warm-sand);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: var(--muted-gold);
+        }
+
+        .copyright {
+            font-size: 13px;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 90px;
+                left: 0;
+                width: 100%;
+                background-color: var(--warm-sand);
+                padding: 24px;
+                border-bottom: 1px solid var(--warm-sand-dark);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .hero {
+                text-align: center;
+            }
+
+            .hero-content {
+                margin: 0 auto;
+            }
+
+            .hero-btns {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="top">
+        <div class="container nav-container">
+            <a href="#top" class="logo">
+                <span class="logo-title">Lewiden Landscapers</span>
+                <span class="logo-sub">& Nurseries Nairobi</span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#plant-shop" class="nav-link">Plant Shop</a>
+                <a href="#locations" class="nav-link">Locations</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#contact" class="btn btn-gold btn-sm">Get a Quote</a>
+            </nav>
+
+            <div class="mobile-toggle" id="mobileToggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <img src="image/whiteflower.jpeg" alt="Hero Background" class="hero-bg-img">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">Nairobi's Premier Landscape Architecture & Nurseries</span>
+                <h1>Transforming Outdoor Spaces Into Living Masterpieces</h1>
+                <p>Specializing in luxury landscape architecture, commercial softscaping, custom rock gardens, and premium wholesale plant propagation across Nairobi and Karen.</p>
+                <div class="hero-btns">
+                    <a href="#plant-shop" class="btn btn-gold">Browse Plant Shop</a>
+                    <a href="#gallery" class="btn btn-outline">View Portfolio</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">What We Excel At</span>
+                <h2 class="section-title">Comprehensive Landscaping Services</h2>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img-wrapper">
+                        <img src="image/grass.jpeg" alt="Lawn Setup & Maintenance">
+                    </div>
+                    <div class="service-body">
+                        <div class="service-icon"><i class="fa-solid fa-seedling"></i></div>
+                        <h3>Lawn Setup & Maintenance</h3>
+                        <p>Professional turf installation, weed control, regular mowing, and comprehensive ground care to keep your lawn looking vibrant and immaculate year-round.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-img-wrapper">
+                        <img src="image/grass2.jpeg" alt="Commercial Compound Landscaping">
+                    </div>
+                    <div class="service-body">
+                        <div class="service-icon"><i class="fa-solid fa-building-shield"></i></div>
+                        <h3>Commercial Compound Landscaping</h3>
+                        <p>Complete corporate exterior styling, structured hedges, paved walkway integration, and tidy green spaces tailored for commercial properties.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-img-wrapper">
+                        <img src="image/whiteflower.jpeg" alt="Floral Gardens & Shrubbery">
+                    </div>
+                    <div class="service-body">
+                        <div class="service-icon"><i class="fa-solid fa-spa"></i></div>
+                        <h3>Floral Gardens & Shrubbery</h3>
+                        <p>Exotic flowering plants, ornamental shrubs, and bespoke garden flower beds designed to add bursts of natural color to your property.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-img-wrapper">
+                        <img src="image/hangings2.jpeg" alt="Hanging Plants & Vertical Gardens">
+                    </div>
+                    <div class="service-body">
+                        <div class="service-icon"><i class="fa-solid fa-leaf"></i></div>
+                        <h3>Hanging Plants & Vertical Gardens</h3>
+                        <p>Creative vertical green installations, decorative hanging planters, and patio greenery solutions that optimize space and elevate aesthetics.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-img-wrapper">
+                        <img src="image/treeblue.jpeg" alt="Ornamental Trees & Conifers">
+                    </div>
+                    <div class="service-body">
+                        <div class="service-icon"><i class="fa-solid fa-tree"></i></div>
+                        <h3>Ornamental Trees & Conifers</h3>
+                        <p>Supply and planting of exotic ornamental trees, privacy conifers, and statement feature trees sourced directly from our nurseries.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-img-wrapper">
+                        <img src="image/daisy.jpeg" alt="Nursery Seedlings & Bulk Supply">
+                    </div>
+                    <div class="service-body">
+                        <div class="service-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                        <h3>Nursery Seedlings & Bulk Supply</h3>
+                        <p>Direct wholesale pricing on bulk flower seedlings, ground covers, and hardy plant stock for landscaping contractors and developers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Plant Shop & WhatsApp Order Section -->
+    <section id="plant-shop" class="plant-shop-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Direct Nursery Catalog</span>
+                <h2 class="section-title">Select Plants & Turf for Order</h2>
+            </div>
+
+            <div class="plant-grid">
+                <!-- Plant 1 -->
+                <div class="plant-card">
+                    <span class="plant-badge">In Stock</span>
+                    <div class="plant-img-wrapper">
+                        <img src="image/palmtree.jpg" alt="Majestic Palm">
+                    </div>
+                    <div class="plant-body">
+                        <div>
+                            <h3>Majestic Palm</h3>
+                            <div class="plant-price">KES 3,500</div>
+                            <p>Elegant indoor/outdoor specimen palm adding tropical grandeur to entrances and patios.</p>
+                        </div>
+                        <button class="btn btn-forest btn-sm add-to-list-btn" data-name="Majestic Palm" data-price="3500">+ Add to List</button>
+                    </div>
+                </div>
+
+                <!-- Plant 2 -->
+                <div class="plant-card">
+                    <span class="plant-badge" style="background-color: var(--muted-gold-dark); color: var(--white);">Bestseller</span>
+                    <div class="plant-img-wrapper">
+                        <img src="image/whiteflower.jpeg" alt="Exotic Orchid Specimen">
+                    </div>
+                    <div class="plant-body">
+                        <div>
+                            <h3>Ornamental grass</h3>
+                            <div class="plant-price">KES 1,000</div>
+                            <p>Vibrant flowering orchids cultivated in prime climate nurseries for lasting indoor blooms.</p>
+                        </div>
+                        <button class="btn btn-forest btn-sm add-to-list-btn" data-name="Exotic Orchid Specimen" data-price="2000">+ Add to List</button>
+                    </div>
+                </div>
+
+                <!-- Plant 3 -->
+                <div class="plant-card">
+                    <span class="plant-badge" style="background-color: #2D312E; color: var(--muted-gold);">Wholesale</span>
+                    <div class="plant-img-wrapper">
+                        <img src="image/daisy.jpeg" alt="Variegated Groundcover Tray">
+                    </div>
+                    <div class="plant-body">
+                        <div>
+                            <h3>Variegated Groundcover Tray</h3>
+                            <div class="plant-price">KES 1,200 / tray</div>
+                            <p>Hardy perennial groundcovers ideal for slopes, flower beds, and weed suppression.</p>
+                        </div>
+                        <button class="btn btn-forest btn-sm add-to-list-btn" data-name="Variegated Groundcover Tray" data-price="1200">+ Add to List</button>
+                    </div>
+                </div>
+
+                <!-- Plant 4 -->
+                <div class="plant-card">
+                    <span class="plant-badge" style="background-color: #8b0000; color: #fff;">High Demand</span>
+                    <div class="plant-img-wrapper">
+                        <img src="image/grass.jpeg" alt="Pemba & Kikuyu Turf Grass">
+                    </div>
+                    <div class="plant-body">
+                        <div>
+                            <h3>Pemba & Kikuyu Turf Grass</h3>
+                            <div class="plant-price">KES 350 / sqm</div>
+                            <p>Freshly harvested weed-free turf rolls ready for immediate instant lawn establishment.</p>
+                        </div>
+                        <button class="btn btn-forest btn-sm add-to-list-btn" data-name="Pemba & Kikuyu Turf Grass" data-price="350">+ Add to List</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Your Plant Selection Summary Box -->
+            <div class="order-summary-box">
+                <div class="order-summary-header">
+                    <h3>Your Plant Selection Summary</h3>
+                    <div class="item-counter-badge" id="itemCounterBadge">0 items selected</div>
+                </div>
+
+                <div class="selected-items-list" id="selectedItemsList">
+                    <div class="empty-cart-text">No plants selected yet. Click "Add to List" on any plant above to build your order.</div>
+                </div>
+
+                <div class="order-summary-footer">
+                    <div class="total-price-display">Total Estimate: <span id="totalPriceDisplay">KES 0</span></div>
+                    <button class="btn btn-gold" id="whatsappOrderBtn" disabled style="opacity: 0.6; cursor: not-allowed;">
+                        <i class="fa-brands fa-whatsapp"></i> Continue to WhatsApp Order
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="locations" class="locations-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Footprint</span>
+                <h2 class="section-title">Visit Our Offices & Plant Nurseries</h2>
+            </div>
+
+            <div class="locations-grid">
+                <div class="location-card">
+                    <span class="location-tag">Design Headquarters</span>
+                    <h3>Karen Main Office</h3>
+                    <ul class="location-details">
+                        <li><i class="fa-solid fa-location-dot"></i> <span>Consolata Area / Near Brookhouse School, Karen, Nairobi</span></li>
+                        <li><i class="fa-solid fa-clock"></i> <span>Mon - Sat: 8:00 AM - 5:00 PM</span></li>
+                        <li><i class="fa-solid fa-comments"></i> <span>Landscape Design Consultations & Site Planning</span></li>
+                    </ul>
+                    <a href="#contact" class="btn btn-forest btn-sm">Book Consultation</a>
+                </div>
+
+                <div class="location-card">
+                    <span class="location-tag">Retail Nursery</span>
+                    <h3>Bomas Nursery (Karen)</h3>
+                    <ul class="location-details">
+                        <li><i class="fa-solid fa-location-dot"></i> <span>Bomas of Kenya Environs, Langata / Karen Border</span></li>
+                        <li><i class="fa-solid fa-clock"></i> <span>Mon - Sun: 7:30 AM - 6:00 PM</span></li>
+                        <li><i class="fa-solid fa-seedling"></i> <span>Exotic flowers, mature palms, and ornamental shrubs</span></li>
+                    </ul>
+                    <a href="#contact" class="btn btn-forest btn-sm">Inquire Plants</a>
+                </div>
+
+                <div class="location-card">
+                    <span class="location-tag">Wholesale Propagation</span>
+                    <h3>Matasia Nursery</h3>
+                    <ul class="location-details">
+                        <li><i class="fa-solid fa-location-dot"></i> <span>Matasia Town Hub, Ngong / Kajiado Route</span></li>
+                        <li><i class="fa-solid fa-clock"></i> <span>Mon - Sat: 8:00 AM - 5:30 PM</span></li>
+                        <li><i class="fa-solid fa-boxes-stacked"></i> <span>Wholesale tree propagation, ground covers & bulk turf</span></li>
+                    </ul>
+                    <a href="#contact" class="btn btn-forest btn-sm">Bulk Orders</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle" style="color: var(--muted-gold);">Our Portfolio</span>
+                <h2 class="section-title">Recent Landscape Masterpieces</h2>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-card">
+                    <div class="gallery-img">
+                        <img src="image/hangingss.jpeg" alt="Veranda & Patio Greenery Setup">
+                    </div>
+                    <div class="gallery-content">
+                        <div>
+                            <h4>Veranda & Patio Greenery Setup</h4>
+                            <p>Elegant vertical planters and cascading hanging arrangements designed to accent outdoor living spaces.</p>
+                        </div>
+                        <a href="#contact" class="btn btn-outline btn-sm">Inquire Similar</a>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-img">
+                        <img src="image/tree.jpeg" alt="Mature Estate Landscaping">
+                    </div>
+                    <div class="gallery-content">
+                        <div>
+                            <h4>Mature Estate Landscaping</h4>
+                            <p>Full-scale property transformation featuring established shade trees, neat borders, and balanced softscaping.</p>
+                        </div>
+                        <a href="#contact" class="btn btn-outline btn-sm">Inquire Similar</a>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-img">
+                        <img src="image/grass2.jpeg" alt="Corporate Compound Landscaping">
+                    </div>
+                    <div class="gallery-content">
+                        <div>
+                            <h4>Corporate Compound Landscaping</h4>
+                            <p>Professional exterior styling, clean stone walkways, and pristine lawn layouts for commercial properties.</p>
+                        </div>
+                        <a href="#contact" class="btn btn-outline btn-sm">Inquire Similar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info-side">
+                    <div>
+                        <h3>Get In Touch With Our Landscaping Experts</h3>
+                        <p>Ready to bring your dream landscape to life or source bulk plants for your next project? Reach out to our team today for prompt assistance.</p>
+                        <ul class="info-list">
+                            <li><i class="fa-solid fa-phone"></i> <span>+254 724 576 718</span></li>
+                            <li><i class="fa-solid fa-envelope"></i> <span>info@lewidenlandscapes.co.ke</span></li>
+                            <li><i class="fa-solid fa-location-dot"></i> <span>Karen Main Office, Consolata Area, Nairobi</span></li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 30px;">
+                        <span class="location-tag" style="color: var(--muted-gold);">Working Hours</span>
+                        <p style="margin-bottom: 0;">Monday – Saturday: 8:00 AM – 5:00 PM</p>
+                    </div>
+                </div>
+
+                <div class="contact-form-side">
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Your Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="e.g. +254 712 345 678" required>
+                        </div>
+                  <div class="form-group">
+                            <label for="serviceRequested">Service / Inquiry Type</label>
+                            <select id="serviceRequested" class="form-control" required>
+                                <option value="" disabled selected>Select a service...</option>
+                                <option value="Residential Landscape Design">Residential Landscape Design</option>
+                                <option value="Commercial Softscaping & Hardscaping">Commercial Softscaping & Hardscaping</option>
+                                <option value="Premium Turf & Lawn Installation">Premium Turf & Lawn Installation</option>
+                                <option value="Water Features & Rock Gardens">Water Features & Rock Gardens</option>
+                                <option value="Scheduled Maintenance">Scheduled Maintenance</option>
+                                <option value="Wholesale Plant Nursery Supply">Wholesale Plant Nursery Supply</option>
+                                <option value="Custom Project Inquiry">Custom Project Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Project Details / Message</label>
+                            <textarea id="message" class="form-control" placeholder="Tell us about your space or plant requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-gold" style="width: 100%;">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Lewiden Landscapers & Nurseries</div>
+                <div class="footer-links">
+                    <a href="#top">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#plant-shop">Plant Shop</a>
+                    <a href="#locations">Locations</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2026 Lewiden Landscapers & Nurseries Nairobi. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Interactive Plant Shop Order Cart Logic
+        let selectedPlants = [];
+
+        const addToListButtons = document.querySelectorAll('.add-to-list-btn');
+        const selectedItemsList = document.getElementById('selectedItemsList');
+        const itemCounterBadge = document.getElementById('itemCounterBadge');
+        const totalPriceDisplay = document.getElementById('totalPriceDisplay');
+        const whatsappOrderBtn = document.getElementById('whatsappOrderBtn');
+
+        addToListButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const name = button.getAttribute('data-name');
+                const price = parseInt(button.getAttribute('data-price'));
+
+                const existingItem = selectedPlants.find(item => item.name === name);
+                if (existingItem) {
+                    existingItem.qty += 1;
+                } else {
+                    selectedPlants.push({ name, price, qty: 1 });
+                }
+                updateCartUI();
+            });
+        });
+
+        function updateCartUI() {
+            selectedItemsList.innerHTML = '';
+            
+            if (selectedPlants.length === 0) {
+                selectedItemsList.innerHTML = `<div class="empty-cart-text">No plants selected yet. Click "Add to List" on any plant above to build your order.</div>`;
+                itemCounterBadge.textContent = `0 items selected`;
+                totalPriceDisplay.textContent = `KES 0`;
+                whatsappOrderBtn.disabled = true;
+                whatsappOrderBtn.style.opacity = '0.6';
+                whatsappOrderBtn.style.cursor = 'not-allowed';
+                return;
+            }
+
+            let totalItems = 0;
+            let totalPrice = 0;
+
+            selectedPlants.forEach((item, index) => {
+                totalItems += item.qty;
+                totalPrice += item.price * item.qty;
+
+                const row = document.createElement('div');
+                row.className = 'cart-item-row';
+                row.innerHTML = `
+                    <div class="cart-item-details">
+                        <span class="cart-item-name">${item.name}</span>
+                        <span class="cart-item-price">KES ${item.price.toLocaleString()} each</span>
+                    </div>
+                    <div class="cart-item-controls">
+                        <div class="qty-btns">
+                            <button class="qty-btn decrease-qty" data-index="${index}">-</button>
+                            <span class="qty-display">${item.qty}</span>
+                            <button class="qty-btn increase-qty" data-index="${index}">+</button>
+                        </div>
+                        <button class="remove-item-btn" data-index="${index}"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                `;
+                selectedItemsList.appendChild(row);
+            });
+
+            itemCounterBadge.textContent = `${totalItems} item${totalItems > 1 ? 's' : ''} selected`;
+            totalPriceDisplay.textContent = `KES ${totalPrice.toLocaleString()}`;
+            whatsappOrderBtn.disabled = false;
+            whatsappOrderBtn.style.opacity = '1';
+            whatsappOrderBtn.style.cursor = 'pointer';
+
+            // Attach listeners to dynamic quantity & delete buttons
+            document.querySelectorAll('.increase-qty').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const idx = e.target.getAttribute('data-index');
+                    selectedPlants[idx].qty += 1;
+                    updateCartUI();
+                });
+            });
+
+            document.querySelectorAll('.decrease-qty').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const idx = e.target.getAttribute('data-index');
+                    if (selectedPlants[idx].qty > 1) {
+                        selectedPlants[idx].qty -= 1;
+                    } else {
+                        selectedPlants.splice(idx, 1);
+                    }
+                    updateCartUI();
+                });
+            });
+
+            document.querySelectorAll('.remove-item-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const idx = e.target.closest('button').getAttribute('data-index');
+                    selectedPlants.splice(idx, 1);
+                    updateCartUI();
+                });
+            });
+        }
+
+        // WhatsApp Checkout Handler
+        whatsappOrderBtn.addEventListener('click', () => {
+            if (selectedPlants.length === 0) return;
+
+            let message = "Hello Lewiden Landscapers, I would like to order the following plants/turf:\n\n";
+            let grandTotal = 0;
+
+            selectedPlants.forEach(item => {
+                const subtotal = item.price * item.qty;
+                grandTotal += subtotal;
+                message += `- ${item.name} x ${item.qty} @ KES ${item.price.toLocaleString()} = KES ${subtotal.toLocaleString()}\n`;
+            });
+
+            message += `\n*Total Estimate: KES ${grandTotal.toLocaleString()}*\n\nPlease confirm availability and delivery details.`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappNumber = "254700000000"; // Replace with actual business WhatsApp number
+            window.open(`https://wa.me/${+254724576718}?text=${encodedMessage}`, '_blank');
+        });
+    </script>
+</body>
+</html>
