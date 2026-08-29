@@ -1349,7 +1349,7 @@
 </div>
 <div class="form-group">
 <label for="phone">Phone Number</label>
-<input class="form-control" id="phone" placeholder="e.g. +254 712 345 678" required="" type="tel"/>
+<input class="form-control" id="phone" placeholder="e.g. +254 7*2 *** 123" required="" type="tel"/>
 </div>
 <div class="form-group">
 <label for="serviceRequested">Service / Inquiry Type</label>
@@ -1600,7 +1600,7 @@
             message += `\n*Total Estimate: KES ${grandTotal.toLocaleString()}*\n\nPlease confirm availability and delivery details.`;
 
             const encodedMessage = encodeURIComponent(message);
-            const whatsappNumber = "254700000000"; // Replace with actual business WhatsApp number
+            const whatsappNumber = "254724576718"; 
             window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
         });
     </script>
