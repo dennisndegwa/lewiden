@@ -1,15 +1,15 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lewiden Landscapers & Nurseries | Luxury Landscape Architecture & Plant Nursery Nairobi</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lewiden Landscapers &amp; Nurseries | Luxury Landscape Architecture &amp; Plant Nursery Nairobi</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
         :root {
             --forest-green: #1E352F;
             --forest-green-light: #2A4941;
@@ -346,7 +346,7 @@
             line-height: 1.6;
         }
 
-        /* Plant Shop Section Styles */
+        /* Plant Nursery Section Styles */
         .plant-shop-section {
             padding: 100px 0;
             background-color: var(--white);
@@ -358,6 +358,69 @@
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 24px;
             margin-bottom: 60px;
+        }
+
+        /* Plant Catalog Search & View More */
+        .plant-search-wrapper {
+            max-width: 600px;
+            margin: -30px auto 40px;
+            position: relative;
+        }
+
+        .plant-search-wrapper i {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--forest-green);
+            font-size: 16px;
+        }
+
+        #plantSearch {
+            width: 100%;
+            padding: 16px 20px 16px 48px;
+            border: 1px solid var(--warm-sand-dark);
+            background-color: var(--warm-sand);
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: var(--charcoal);
+            transition: var(--transition);
+        }
+
+        #plantSearch:focus {
+            outline: none;
+            border-color: var(--forest-green);
+            background-color: var(--white);
+            box-shadow: 0 0 0 3px rgba(30, 53, 47, 0.1);
+        }
+
+        .plant-card.hidden-plant {
+            display: none;
+        }
+
+        /* Keep every nursery product image the same size */
+        .plant-image {
+            width: 100%;
+            height: 240px;
+            overflow: hidden;
+        }
+
+        .plant-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .view-more-wrapper {
+            text-align: center;
+            margin-top: -30px;
+            margin-bottom: 50px;
+        }
+
+        #viewMorePlants {
+            min-width: 180px;
         }
 
         .plant-card {
@@ -596,7 +659,7 @@
         .total-price-display span {
             color: var(--muted-gold);
         }
-        /* End Plant Shop Styles */
+        /* End Plant Nursery Styles */
 
         .locations-section {
             padding: 100px 0;
@@ -918,380 +981,416 @@
     </style>
 </head>
 <body>
-
-    <header id="top">
-        <div class="container nav-container">
-            <a href="#top" class="logo">
-                <span class="logo-title">Lewiden Landscapers</span>
-                <span class="logo-sub">& Nurseries Nairobi</span>
-            </a>
-            
-            <nav class="nav-menu" id="navMenu">
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#plant-shop" class="nav-link">Plant Shop</a>
-                <a href="#locations" class="nav-link">Locations</a>
-                <a href="#gallery" class="nav-link">Gallery</a>
-                <a href="#contact" class="btn btn-gold btn-sm">Get a Quote</a>
-            </nav>
-
-            <div class="mobile-toggle" id="mobileToggle">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </div>
-    </header>
-
-    <section class="hero">
-        <img src="image/whiteflower.jpeg" alt="Hero Background" class="hero-bg-img">
-        <div class="container">
-            <div class="hero-content">
-                <span class="hero-badge">Nairobi's Premier Landscape Architecture & Nurseries</span>
-                <h1>Transforming Outdoor Spaces Into Living Masterpieces</h1>
-                <p>Specializing in luxury landscape architecture, commercial softscaping, custom rock gardens, and premium wholesale plant propagation across Nairobi and Karen.</p>
-                <div class="hero-btns">
-                    <a href="#plant-shop" class="btn btn-gold">Browse Plant Shop</a>
-                    <a href="#gallery" class="btn btn-outline">View Portfolio</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="services-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">What We Excel At</span>
-                <h2 class="section-title">Comprehensive Landscaping Services</h2>
-            </div>
-
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-img-wrapper">
-                        <img src="image/grass.jpeg" alt="Lawn Setup & Maintenance">
-                    </div>
-                    <div class="service-body">
-                        <div class="service-icon"><i class="fa-solid fa-seedling"></i></div>
-                        <h3>Lawn Setup & Maintenance</h3>
-                        <p>Professional turf installation, weed control, regular mowing, and comprehensive ground care to keep your lawn looking vibrant and immaculate year-round.</p>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-img-wrapper">
-                        <img src="image/grass2.jpeg" alt="Commercial Compound Landscaping">
-                    </div>
-                    <div class="service-body">
-                        <div class="service-icon"><i class="fa-solid fa-building-shield"></i></div>
-                        <h3>Commercial Compound Landscaping</h3>
-                        <p>Complete corporate exterior styling, structured hedges, paved walkway integration, and tidy green spaces tailored for commercial properties.</p>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-img-wrapper">
-                        <img src="image/whiteflower.jpeg" alt="Floral Gardens & Shrubbery">
-                    </div>
-                    <div class="service-body">
-                        <div class="service-icon"><i class="fa-solid fa-spa"></i></div>
-                        <h3>Floral Gardens & Shrubbery</h3>
-                        <p>Exotic flowering plants, ornamental shrubs, and bespoke garden flower beds designed to add bursts of natural color to your property.</p>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-img-wrapper">
-                        <img src="image/hangings2.jpeg" alt="Hanging Plants & Vertical Gardens">
-                    </div>
-                    <div class="service-body">
-                        <div class="service-icon"><i class="fa-solid fa-leaf"></i></div>
-                        <h3>Hanging Plants & Vertical Gardens</h3>
-                        <p>Creative vertical green installations, decorative hanging planters, and patio greenery solutions that optimize space and elevate aesthetics.</p>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-img-wrapper">
-                        <img src="image/treeblue.jpeg" alt="Ornamental Trees & Conifers">
-                    </div>
-                    <div class="service-body">
-                        <div class="service-icon"><i class="fa-solid fa-tree"></i></div>
-                        <h3>Ornamental Trees & Conifers</h3>
-                        <p>Supply and planting of exotic ornamental trees, privacy conifers, and statement feature trees sourced directly from our nurseries.</p>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-img-wrapper">
-                        <img src="image/daisy.jpeg" alt="Nursery Seedlings & Bulk Supply">
-                    </div>
-                    <div class="service-body">
-                        <div class="service-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
-                        <h3>Nursery Seedlings & Bulk Supply</h3>
-                        <p>Direct wholesale pricing on bulk flower seedlings, ground covers, and hardy plant stock for landscaping contractors and developers.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Interactive Plant Shop & WhatsApp Order Section -->
-    <section id="plant-shop" class="plant-shop-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Direct Nursery Catalog</span>
-                <h2 class="section-title">Select Plants & Turf for Order</h2>
-            </div>
-
-            <div class="plant-grid">
-                <!-- Plant 1 -->
-                <div class="plant-card">
-                    <span class="plant-badge">In Stock</span>
-                    <div class="plant-img-wrapper">
-                        <img src="image/palmtree.jpg" alt="Majestic Palm">
-                    </div>
-                    <div class="plant-body">
-                        <div>
-                            <h3>Majestic Palm</h3>
-                            <div class="plant-price">KES 3,500</div>
-                            <p>Elegant indoor/outdoor specimen palm adding tropical grandeur to entrances and patios.</p>
-                        </div>
-                        <button class="btn btn-forest btn-sm add-to-list-btn" data-name="Majestic Palm" data-price="3500">+ Add to List</button>
-                    </div>
-                </div>
-
-                <!-- Plant 2 -->
-                <div class="plant-card">
-                    <span class="plant-badge" style="background-color: var(--muted-gold-dark); color: var(--white);">Bestseller</span>
-                    <div class="plant-img-wrapper">
-                        <img src="image/whiteflower.jpeg" alt="Exotic Orchid Specimen">
-                    </div>
-                    <div class="plant-body">
-                        <div>
-                            <h3>Ornamental grass</h3>
-                            <div class="plant-price">KES 1,000</div>
-                            <p>Vibrant flowering orchids cultivated in prime climate nurseries for lasting indoor blooms.</p>
-                        </div>
-                        <button class="btn btn-forest btn-sm add-to-list-btn" data-name="Exotic Orchid Specimen" data-price="2000">+ Add to List</button>
-                    </div>
-                </div>
-
-                <!-- Plant 3 -->
-                <div class="plant-card">
-                    <span class="plant-badge" style="background-color: #2D312E; color: var(--muted-gold);">Wholesale</span>
-                    <div class="plant-img-wrapper">
-                        <img src="image/daisy.jpeg" alt="Variegated Groundcover Tray">
-                    </div>
-                    <div class="plant-body">
-                        <div>
-                            <h3>Variegated Groundcover Tray</h3>
-                            <div class="plant-price">KES 1,200 / tray</div>
-                            <p>Hardy perennial groundcovers ideal for slopes, flower beds, and weed suppression.</p>
-                        </div>
-                        <button class="btn btn-forest btn-sm add-to-list-btn" data-name="Variegated Groundcover Tray" data-price="1200">+ Add to List</button>
-                    </div>
-                </div>
-
-                <!-- Plant 4 -->
-                <div class="plant-card">
-                    <span class="plant-badge" style="background-color: #8b0000; color: #fff;">High Demand</span>
-                    <div class="plant-img-wrapper">
-                        <img src="image/grass.jpeg" alt="Pemba & Kikuyu Turf Grass">
-                    </div>
-                    <div class="plant-body">
-                        <div>
-                            <h3>Pemba & Kikuyu Turf Grass</h3>
-                            <div class="plant-price">KES 350 / sqm</div>
-                            <p>Freshly harvested weed-free turf rolls ready for immediate instant lawn establishment.</p>
-                        </div>
-                        <button class="btn btn-forest btn-sm add-to-list-btn" data-name="Pemba & Kikuyu Turf Grass" data-price="350">+ Add to List</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Your Plant Selection Summary Box -->
-            <div class="order-summary-box">
-                <div class="order-summary-header">
-                    <h3>Your Plant Selection Summary</h3>
-                    <div class="item-counter-badge" id="itemCounterBadge">0 items selected</div>
-                </div>
-
-                <div class="selected-items-list" id="selectedItemsList">
-                    <div class="empty-cart-text">No plants selected yet. Click "Add to List" on any plant above to build your order.</div>
-                </div>
-
-                <div class="order-summary-footer">
-                    <div class="total-price-display">Total Estimate: <span id="totalPriceDisplay">KES 0</span></div>
-                    <button class="btn btn-gold" id="whatsappOrderBtn" disabled style="opacity: 0.6; cursor: not-allowed;">
-                        <i class="fa-brands fa-whatsapp"></i> Continue to WhatsApp Order
+<header id="top">
+<div class="container nav-container">
+<a class="logo" href="#top">
+<span class="logo-title">Lewiden Landscapers</span>
+<span class="logo-sub">&amp; Nurseries Nairobi</span>
+</a>
+<nav class="nav-menu" id="navMenu">
+<a class="nav-link" href="#services">Services</a>
+<a class="nav-link" href="#plant-shop">Plant Nursery</a>
+<a class="nav-link" href="#locations">Locations</a>
+<a class="nav-link" href="#gallery">Gallery</a>
+<a class="btn btn-gold btn-sm" href="#contact">Get a Quote</a>
+</nav>
+<div class="mobile-toggle" id="mobileToggle">
+<i class="fa-solid fa-bars"></i>
+</div>
+</div>
+</header>
+<section class="hero">
+<img alt="Hero Background" class="hero-bg-img" src="image/background .jpg"/>
+<div class="container">
+<div class="hero-content">
+<span class="hero-badge">Nairobi's Premier Landscape Architecture &amp; Nurseries</span>
+<h1>Transforming Outdoor Spaces Into Living Masterpieces</h1>
+<p>Specializing in luxury landscape architecture, commercial softscaping, custom rock gardens, and premium wholesale plant propagation across Nairobi and Karen.</p>
+<div class="hero-btns">
+<a class="btn btn-gold" href="#plant-shop">Browse Plant Nursery</a>
+<a class="btn btn-outline" href="#gallery">View Portfolio</a>
+</div>
+</div>
+</div>
+</section>
+<section class="services-section" id="services">
+<div class="container">
+<div class="section-header">
+<span class="section-subtitle">What We Excel At</span>
+<h2 class="section-title">Comprehensive Landscaping Services</h2>
+</div>
+<div class="services-grid">
+<div class="service-card">
+<div class="service-img-wrapper">
+<img alt="Lawn Setup &amp; Maintenance" src="image/grass.jpeg"/>
+</div>
+<div class="service-body">
+<div class="service-icon"><i class="fa-solid fa-seedling"></i></div>
+<h3>Lawn Setup &amp; Maintenance</h3>
+<p>Professional turf installation, weed control, regular mowing, and comprehensive ground care to keep your lawn looking vibrant and immaculate year-round.</p>
+</div>
+</div>
+<div class="service-card">
+<div class="service-img-wrapper">
+<img alt="Commercial Compound Landscaping" src="image/grass2.jpeg"/>
+</div>
+<div class="service-body">
+<div class="service-icon"><i class="fa-solid fa-building-shield"></i></div>
+<h3>Commercial Compound Landscaping</h3>
+<p>Complete corporate exterior styling, structured hedges, paved walkway integration, and tidy green spaces tailored for commercial properties.</p>
+</div>
+</div>
+<div class="service-card">
+<div class="service-img-wrapper">
+<img alt="Floral Gardens &amp; Shrubbery" src="image/whiteflower.jpeg"/>
+</div>
+<div class="service-body">
+<div class="service-icon"><i class="fa-solid fa-spa"></i></div>
+<h3>Floral Gardens &amp; Shrubbery</h3>
+<p>Exotic flowering plants, ornamental shrubs, and bespoke garden flower beds designed to add bursts of natural color to your property.</p>
+</div>
+</div>
+<div class="service-card">
+<div class="service-img-wrapper">
+<img alt="Hanging Plants &amp; Vertical Gardens" src="image/hangings2.jpeg"/>
+</div>
+<div class="service-body">
+<div class="service-icon"><i class="fa-solid fa-leaf"></i></div>
+<h3>Hanging Plants &amp; Vertical Gardens</h3>
+<p>Creative vertical green installations, decorative hanging planters, and patio greenery solutions that optimize space and elevate aesthetics.</p>
+</div>
+</div>
+<div class="service-card">
+<div class="service-img-wrapper">
+<img alt="Ornamental Trees &amp; Conifers" src="image/treeblue.jpeg"/>
+</div>
+<div class="service-body">
+<div class="service-icon"><i class="fa-solid fa-tree"></i></div>
+<h3>Ornamental Trees &amp; Conifers</h3>
+<p>Supply and planting of exotic ornamental trees, privacy conifers, and statement feature trees sourced directly from our nurseries.</p>
+</div>
+</div>
+<div class="service-card">
+<div class="service-img-wrapper">
+<img alt="Nursery Seedlings &amp; Bulk Supply" src="image/daisy.jpeg"/>
+</div>
+<div class="service-body">
+<div class="service-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+<h3>Nursery Seedlings &amp; Bulk Supply</h3>
+<p>Direct wholesale pricing on bulk flower seedlings, ground covers, and hardy plant stock for landscaping contractors and developers.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Plant Nursery & WhatsApp Order Section -->
+<section class="plant-shop-section" id="plant-shop">
+<div class="container">
+<div class="section-header">
+<span class="section-subtitle">Direct Nursery Catalog</span>
+<h2 class="section-title">Select Plants &amp; Turf for Order</h2>
+</div>
+<!-- Plant Search Bar -->
+<div class="plant-search-wrapper">
+<i class="fa-solid fa-magnifying-glass"></i>
+<input id="plantSearch" placeholder="Search for plants, turf, palms..." type="text"/>
+</div>
+<div class="plant-grid">
+<!-- Plant 1 -->
+<div class="plant-card">
+<span class="plant-badge">In Stock</span>
+<div class="plant-img-wrapper">
+<img alt="Majestic Palm" src="image/palmtree.jpg"/>
+</div>
+<div class="plant-body">
+<div>
+<h3>Majestic Palm</h3>
+<div class="plant-price">KES 3,500</div>
+<p>Elegant indoor/outdoor specimen palm adding tropical grandeur to entrances and patios.</p>
+</div>
+<button class="btn btn-forest btn-sm add-to-list-btn" data-name="Majestic Palm" data-price="3500">+ Add to List</button>
+</div>
+</div>
+<!-- Plant 2 -->
+<div class="plant-card">
+<span class="plant-badge" style="background-color: var(--muted-gold-dark); color: var(--white);">Bestseller</span>
+<div class="plant-img-wrapper">
+<img alt="Ornamental grass" src="image/whiteflower.jpeg"/>
+</div>
+<div class="plant-body">
+<div>
+<h3>Ornamental grass</h3>
+<div class="plant-price">KES 1,000</div>
+<p>Premium ornamental grass for borders, pathways, beds, and decorative landscape displays.</p>
+</div>
+<button class="btn btn-forest btn-sm add-to-list-btn" data-name="Ornamental grass" data-price="1000">+ Add to List</button>
+</div>
+</div>
+<!-- Plant 3 -->
+<div class="plant-card">
+<span class="plant-badge" style="background-color: #2D312E; color: var(--muted-gold);">Wholesale</span>
+<div class="plant-img-wrapper">
+<img alt="Variegated Groundcover Tray" src="image/daisy.jpeg"/>
+</div>
+<div class="plant-body">
+<div>
+<h3>Variegated Groundcover Tray</h3>
+<div class="plant-price">KES 1,200 / tray</div>
+<p>Hardy perennial groundcovers ideal for slopes, flower beds, and weed suppression.</p>
+</div>
+<button class="btn btn-forest btn-sm add-to-list-btn" data-name="Variegated Groundcover Tray" data-price="1200">+ Add to List</button>
+</div>
+</div>
+<!-- Plant 4 -->
+<div class="plant-card">
+<span class="plant-badge" style="background-color: #8b0000; color: #fff;">High Demand</span>
+<div class="plant-img-wrapper">
+<img alt="Pemba &amp; Kikuyu Turf Grass" src="image/grass.jpeg"/>
+</div>
+<div class="plant-body">
+<div>
+<h3>Pemba &amp; Kikuyu Turf Grass</h3>
+<div class="plant-price">KES 350 / sqm</div>
+<p>Freshly harvested weed-free turf rolls ready for immediate instant lawn establishment.</p>
+</div>
+<button class="btn btn-forest btn-sm add-to-list-btn" data-name="Pemba &amp; Kikuyu Turf Grass" data-price="350">+ Add to List</button>
+</div>
+</div>
+<!-- Additional Nursery Plants -->
+<div class="plant-card"><div class="plant-image"><img alt="Premium Rose Bush" src="image/rose.jpg"/></div><div class="plant-info"><h3>Premium Rose Bush</h3><p>Classic flowering rose, ideal for gardens and landscaping.</p><div class="plant-footer"><span class="plant-price">KES 800</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Premium Rose Bush" data-price="800">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Premium Orchid" src="https://images.unsplash.com/photo-1560717789-0ac7c58ac90a?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/></div><div class="plant-info"><h3>Premium Orchid</h3><p>Elegant exotic flowering plant for premium displays.</p><div class="plant-footer"><span class="plant-price">KES 3,500</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Premium Orchid" data-price="3500">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Bougainvillea" src="image/Bougainvillea.jpg"/></div><div class="plant-info"><h3>Bougainvillea</h3><p>Colourful climbing shrub for fences, walls and sunny gardens.</p><div class="plant-footer"><span class="plant-price">KES 700</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Bougainvillea" data-price="700">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Hibiscus" src="image/Hibiscus.jpg"/></div><div class="plant-info"><h3>Hibiscus</h3><p>Tropical flowering shrub with large colourful blooms.</p><div class="plant-footer"><span class="plant-price">KES 650</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Hibiscus" data-price="650">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Geranium" src="image/Geranium.jpg"/></div><div class="plant-info"><h3>Geranium</h3><p>Bright, long-flowering plant for beds, pots and balconies.</p><div class="plant-footer"><span class="plant-price">KES 450</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Geranium" data-price="450">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Petunia" src="image/Petunia.jpg"/></div><div class="plant-info"><h3>Petunia</h3><p>Colourful flowering plant for borders, baskets and containers.</p><div class="plant-footer"><span class="plant-price">KES 350</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Petunia" data-price="350">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Lavender" src="image/Lavender.jpg"/></div><div class="plant-info"><h3>Lavender</h3><p>Fragrant flowering plant with beautiful purple blooms.</p><div class="plant-footer"><span class="plant-price">KES 900</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Lavender" data-price="900">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Sunflower" src="image/Sunflower.jpg"/></div><div class="plant-info"><h3>Sunflower</h3><p>Cheerful tall flowering plant for sunny garden spaces.</p><div class="plant-footer"><span class="plant-price">KES 300</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Sunflower" data-price="300">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Bird of Paradise" src="image/Bird of Paradise.jpg"/></div><div class="plant-info"><h3>Bird of Paradise</h3><p>Striking architectural tropical plant for premium landscapes.</p><div class="plant-footer"><span class="plant-price">KES 4,500</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Bird of Paradise" data-price="4500">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Hydrangea" src="image/Hydrangea.jpg"/></div><div class="plant-info"><h3>Hydrangea</h3><p>Premium flowering shrub with large decorative flower clusters.</p><div class="plant-footer"><span class="plant-price">KES 2,500</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Hydrangea" data-price="2500">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Areca Palm" src="image/Areca Palm.jpg"/></div><div class="plant-info"><h3>Areca Palm</h3><p>Popular lush palm for homes, offices and landscapes.</p><div class="plant-footer"><span class="plant-price">KES 2,000</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Areca Palm" data-price="2000">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Fan Palm" src="image/Fan Palm.jpg"/></div><div class="plant-info"><h3>Fan Palm</h3><p>Elegant statement palm suited for gardens and entrances.</p><div class="plant-footer"><span class="plant-price">KES 5,000</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Fan Palm" data-price="5000">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Snake Plant" src="image/Snake Plant.jpg"/></div><div class="plant-info"><h3>Snake Plant</h3><p>Hardy low-maintenance plant for indoor and outdoor spaces.</p><div class="plant-footer"><span class="plant-price">KES 1,200</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Snake Plant" data-price="1200">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Monstera Deliciosa" src="image/Monstera Deliciosa.jpg"/></div><div class="plant-info"><h3>Monstera Deliciosa</h3><p>Large-leaf tropical statement plant for modern spaces.</p><div class="plant-footer"><span class="plant-price">KES 3,000</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Monstera Deliciosa" data-price="3000">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Fiddle Leaf Fig" src="image/Fiddle Leaf Fig.jpg"/></div><div class="plant-info"><h3>Fiddle Leaf Fig</h3><p>Premium ornamental indoor tree with bold glossy leaves.</p><div class="plant-footer"><span class="plant-price">KES 4,000</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Fiddle Leaf Fig" data-price="4000">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Croton" src="image/Croton.jpg"/></div><div class="plant-info"><h3>Croton</h3><p>Vibrant foliage plant with rich yellow, red and green leaves.</p><div class="plant-footer"><span class="plant-price">KES 1,000</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Croton" data-price="1000">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Jasmine" src="image/Jasmine.jpg"/></div><div class="plant-info"><h3>Jasmine</h3><p>Sweetly fragrant flowering climber for gardens and pergolas.</p><div class="plant-footer"><span class="plant-price">KES 900</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Jasmine" data-price="900">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Ixora" src="image/Ixora.jpg"/></div><div class="plant-info"><h3>Ixora</h3><p>Dense tropical shrub producing clusters of colourful flowers.</p><div class="plant-footer"><span class="plant-price">KES 600</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Ixora" data-price="600">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Aloe Vera" src="image/Aloe Vera.jpg"/></div><div class="plant-info"><h3>Aloe Vera</h3><p>Useful hardy succulent with attractive sculptural foliage.</p><div class="plant-footer"><span class="plant-price">KES 500</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Aloe Vera" data-price="500">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Agave" src="image/Agave.jpg"/></div><div class="plant-info"><h3>Agave</h3><p>Dramatic drought-tolerant architectural succulent.</p><div class="plant-footer"><span class="plant-price">KES 1,500</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Agave" data-price="1500">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Marigold" src="image/Marigold.jpg"/></div><div class="plant-info"><h3>Marigold</h3><p>Easy colourful flowering plant for borders and beds.</p><div class="plant-footer"><span class="plant-price">KES 250</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Marigold" data-price="250">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Dahlia" src="image/Dahlia.jpg"/></div><div class="plant-info"><h3>Dahlia</h3><p>Showy premium flowers available in many colours and forms.</p><div class="plant-footer"><span class="plant-price">KES 1,200</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Dahlia" data-price="1200">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Chrysanthemum" src="image/Chrysanthemum.jpg"/></div><div class="plant-info"><h3>Chrysanthemum</h3><p>Popular flowering plant with long-lasting decorative blooms.</p><div class="plant-footer"><span class="plant-price">KES 700</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Chrysanthemum" data-price="700">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Coconut Palm" src="image/Coconut Palm.jpg"/></div><div class="plant-info"><h3>Coconut Palm</h3><p>Tropical feature palm for spacious gardens and resorts.</p><div class="plant-footer"><span class="plant-price">KES 6,000</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Coconut Palm" data-price="6000">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Royal Palm" src="image/Royal Palm.jpg"/></div><div class="plant-info"><h3>Royal Palm</h3><p>Premium tall palm for luxury properties and avenue planting.</p><div class="plant-footer"><span class="plant-price">KES 15,000</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Royal Palm" data-price="15000">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Bamboo Palm" src="image/Bamboo Palm.jpg"/></div><div class="plant-info"><h3>Bamboo Palm</h3><p>Graceful palm for shaded gardens and stylish interiors.</p><div class="plant-footer"><span class="plant-price">KES 2,800</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Bamboo Palm" data-price="2800">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Canna Lily" src="image/Canna Lily.jpg"/></div><div class="plant-info"><h3>Canna Lily</h3><p>Bold tropical foliage and colourful flowers for landscaping.</p><div class="plant-footer"><span class="plant-price">KES 800</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Canna Lily" data-price="800">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Anthurium" src="image/Anthurium.jpg"/></div><div class="plant-info"><h3>Anthurium</h3><p>Premium glossy-leaf plant with distinctive long-lasting flowers.</p><div class="plant-footer"><span class="plant-price">KES 2,200</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Anthurium" data-price="2200">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Peace Lily" src="image/Peace Lily.jpg"/></div><div class="plant-info"><h3>Peace Lily</h3><p>Elegant easy-care indoor flowering plant.</p><div class="plant-footer"><span class="plant-price">KES 1,500</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Peace Lily" data-price="1500">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="ZZ Plant" src="image/ZZ Plant.jpg"/></div><div class="plant-info"><h3>ZZ Plant</h3><p>Extremely hardy premium indoor plant with glossy foliage.</p><div class="plant-footer"><span class="plant-price">KES 2,000</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="ZZ Plant" data-price="2000">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Decorative Cactus" src="image/Decorative Cactus.jpg"/></div><div class="plant-info"><h3>Decorative Cactus</h3><p>Low-maintenance succulent collection for modern landscapes.</p><div class="plant-footer"><span class="plant-price">KES 700</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Decorative Cactus" data-price="700">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Succulent Collection" src="image/Succulent Collection.jpg"/></div><div class="plant-info"><h3>Succulent Collection</h3><p>Mixed decorative succulents for pots, gardens and gifts.</p><div class="plant-footer"><span class="plant-price">KES 1,000</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Succulent Collection" data-price="1000">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Lemon Tree" src="image/Lemon Tree.jpg"/></div><div class="plant-info"><h3>Lemon Tree</h3><p>Productive citrus tree for home gardens and orchards.</p><div class="plant-footer"><span class="plant-price">KES 1,500</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Lemon Tree" data-price="1500">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Grafted Mango Tree" src="image/Grafted Mango Tree.jpg"/></div><div class="plant-info"><h3>Grafted Mango Tree</h3><p>Quality fruit tree suitable for productive home gardens.</p><div class="plant-footer"><span class="plant-price">KES 2,500</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Grafted Mango Tree" data-price="2500">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Gardenia" src="image/Gardenia.jpg"/></div><div class="plant-info"><h3>Gardenia</h3><p>Premium fragrant shrub with elegant white flowers.</p><div class="plant-footer"><span class="plant-price">KES 1,800</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Gardenia" data-price="1800">+ Add to List</button></div></div></div>
+</div>
+<!-- More Flowers, Shrubs, Trees & Premium Nursery Stock -->
+<div class="plant-card"><div class="plant-image"><img alt="Daisy" src="image/daisy.jpeg"/></div><div class="plant-info"><h3>Daisy</h3><p>Cheerful classic flowering plant for borders, beds and garden displays.</p><div class="plant-footer"><span class="plant-price">KES 350</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Daisy" data-price="350">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Tulip" src="image/Tulip.jpg"/></div><div class="plant-info"><h3>Tulip</h3><p>Elegant premium flowering plant for colourful decorative displays.</p><div class="plant-footer"><span class="plant-price">KES 900</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Tulip" data-price="900">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Oriental Lily" src="image/Oriental Lily.jpg"/></div><div class="plant-info"><h3>Oriental Lily</h3><p>Premium fragrant lily with dramatic blooms for special gardens.</p><div class="plant-footer"><span class="plant-price">KES 1,800</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Oriental Lily" data-price="1800">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Zinnia" src="image/Zinnia.jpg"/></div><div class="plant-info"><h3>Zinnia</h3><p>Bright long-lasting flowers perfect for sunny beds and borders.</p><div class="plant-footer"><span class="plant-price">KES 300</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Zinnia" data-price="300">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Frangipani" src="image/Frangipani.jpg"/></div><div class="plant-info"><h3>Frangipani</h3><p>Fragrant tropical flowering tree ideal for premium landscapes.</p><div class="plant-footer"><span class="plant-price">KES 3,500</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Frangipani" data-price="3500">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Plumeria" src="image/Plumeria.jpg"/></div><div class="plant-info"><h3>Plumeria</h3><p>Beautiful tropical flowering tree with a sweet fragrance.</p><div class="plant-footer"><span class="plant-price">KES 2,800</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Plumeria" data-price="2800">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Azalea" src="image/Azalea.jpg"/></div><div class="plant-info"><h3>Azalea</h3><p>Premium flowering shrub producing masses of colourful blooms.</p><div class="plant-footer"><span class="plant-price">KES 2,000</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Azalea" data-price="2000">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Rosemary" src="image/Rosemary.jpg"/></div><div class="plant-info"><h3>Rosemary</h3><p>Fragrant culinary and ornamental herb for gardens and pots.</p><div class="plant-footer"><span class="plant-price">KES 500</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Rosemary" data-price="500">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Mint" src="image/Mint.jpg"/></div><div class="plant-info"><h3>Mint</h3><p>Fresh aromatic herb suitable for kitchen gardens and containers.</p><div class="plant-footer"><span class="plant-price">KES 250</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Mint" data-price="250">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Sweet Basil" src="image/Sweet Basil.jpg"/></div><div class="plant-info"><h3>Sweet Basil</h3><p>Popular aromatic herb for fresh kitchen gardens and containers.</p><div class="plant-footer"><span class="plant-price">KES 300</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Sweet Basil" data-price="300">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Tomato Seedling" src="image/Tomato Seedling.jpg"/></div><div class="plant-info"><h3>Tomato Seedling</h3><p>Healthy vegetable seedling for productive home gardens.</p><div class="plant-footer"><span class="plant-price">KES 80</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Tomato Seedling" data-price="80">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Grafted Avocado Tree" src="image/Grafted Avocado Tree.jpg"/></div><div class="plant-info"><h3>Grafted Avocado Tree</h3><p>Quality fruit tree for productive farms and home gardens.</p><div class="plant-footer"><span class="plant-price">KES 2,500</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Grafted Avocado Tree" data-price="2500">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Premium Bougainvillea Tree" src="image/Premium Bougainvillea Tree.jpg"/></div><div class="plant-info"><h3>Bougainvillea Tree</h3><p>Mature colourful feature plant for gates, walls and luxury gardens.</p><div class="plant-footer"><span class="plant-price">KES 5,000</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Premium Bougainvillea Tree" data-price="5000">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Oleander" src="image/Oleander.jpg"/></div><div class="plant-info"><h3>Oleander</h3><p>Flowering ornamental shrub suitable for sunny landscape borders.</p><div class="plant-footer"><span class="plant-price">KES 1,000</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Oleander" data-price="1000">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Dracaena" src="image/Dracaena.jpg"/></div><div class="plant-info"><h3>Dracaena</h3><p>Stylish ornamental foliage plant for homes, offices and gardens.</p><div class="plant-footer"><span class="plant-price">KES 1,500</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Dracaena" data-price="1500">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Spider Plant" src="image/Spider Plant.jpg"/></div><div class="plant-info"><h3>Spider Plant</h3><p>Easy-care air-purifying plant ideal for homes and offices.</p><div class="plant-footer"><span class="plant-price">KES 700</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Spider Plant" data-price="700">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Philodendron" src="image/Philodendron.jpg"/></div><div class="plant-info"><h3>Philodendron</h3><p>Lush tropical foliage plant for premium indoor or shaded spaces.</p><div class="plant-footer"><span class="plant-price">KES 2,200</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Philodendron" data-price="2200">+ Add to List</button></div></div></div>
+<div class="plant-card"><div class="plant-image"><img alt="Japanese Maple" src="image/Japanese Maple.jpg"/></div><div class="plant-info"><h3>Japanese Maple</h3><p>Rare premium ornamental tree with exceptional decorative foliage.</p><div class="plant-footer"><span class="plant-price">KES 12,000</span><button class="btn btn-forest btn-sm add-to-list-btn" data-name="Japanese Maple" data-price="12000">+ Add to List</button></div></div></div>
+<!-- View More Plants -->
+<div class="view-more-wrapper">
+<button class="btn btn-forest" id="viewMorePlants">
+<span>View More Plants</span>
+<i class="fa-solid fa-chevron-down"></i>
+</button>
+</div>
+<!-- Your Plant Selection Summary Box -->
+<div class="order-summary-box">
+<div class="order-summary-header">
+<h3>Your Plant Selection Summary</h3>
+<div class="item-counter-badge" id="itemCounterBadge">0 items selected</div>
+</div>
+<div class="selected-items-list" id="selectedItemsList">
+<div class="empty-cart-text">No plants selected yet. Click "Add to List" on any plant above to build your order.</div>
+</div>
+<div class="order-summary-footer">
+<div class="total-price-display">Total Estimate: <span id="totalPriceDisplay">KES 0</span></div>
+<button class="btn btn-gold" disabled="" id="whatsappOrderBtn" style="opacity: 0.6; cursor: not-allowed;">
+<i class="fa-brands fa-whatsapp"></i> Continue to WhatsApp Order
                     </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="locations" class="locations-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Our Footprint</span>
-                <h2 class="section-title">Visit Our Offices & Plant Nurseries</h2>
-            </div>
-
-            <div class="locations-grid">
-                <div class="location-card">
-                    <span class="location-tag">Design Headquarters</span>
-                    <h3>Karen Main Office</h3>
-                    <ul class="location-details">
-                        <li><i class="fa-solid fa-location-dot"></i> <span>Consolata Area / Near Brookhouse School, Karen, Nairobi</span></li>
-                        <li><i class="fa-solid fa-clock"></i> <span>Mon - Sat: 8:00 AM - 5:00 PM</span></li>
-                        <li><i class="fa-solid fa-comments"></i> <span>Landscape Design Consultations & Site Planning</span></li>
-                    </ul>
-                    <a href="#contact" class="btn btn-forest btn-sm">Book Consultation</a>
-                </div>
-
-                <div class="location-card">
-                    <span class="location-tag">Retail Nursery</span>
-                    <h3>Bomas Nursery (Karen)</h3>
-                    <ul class="location-details">
-                        <li><i class="fa-solid fa-location-dot"></i> <span>Bomas of Kenya Environs, Langata / Karen Border</span></li>
-                        <li><i class="fa-solid fa-clock"></i> <span>Mon - Sun: 7:30 AM - 6:00 PM</span></li>
-                        <li><i class="fa-solid fa-seedling"></i> <span>Exotic flowers, mature palms, and ornamental shrubs</span></li>
-                    </ul>
-                    <a href="#contact" class="btn btn-forest btn-sm">Inquire Plants</a>
-                </div>
-
-                <div class="location-card">
-                    <span class="location-tag">Wholesale Propagation</span>
-                    <h3>Matasia Nursery</h3>
-                    <ul class="location-details">
-                        <li><i class="fa-solid fa-location-dot"></i> <span>Matasia Town Hub, Ngong / Kajiado Route</span></li>
-                        <li><i class="fa-solid fa-clock"></i> <span>Mon - Sat: 8:00 AM - 5:30 PM</span></li>
-                        <li><i class="fa-solid fa-boxes-stacked"></i> <span>Wholesale tree propagation, ground covers & bulk turf</span></li>
-                    </ul>
-                    <a href="#contact" class="btn btn-forest btn-sm">Bulk Orders</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="gallery" class="gallery-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle" style="color: var(--muted-gold);">Our Portfolio</span>
-                <h2 class="section-title">Recent Landscape Masterpieces</h2>
-            </div>
-
-            <div class="gallery-grid">
-                <div class="gallery-card">
-                    <div class="gallery-img">
-                        <img src="image/hangingss.jpeg" alt="Veranda & Patio Greenery Setup">
-                    </div>
-                    <div class="gallery-content">
-                        <div>
-                            <h4>Veranda & Patio Greenery Setup</h4>
-                            <p>Elegant vertical planters and cascading hanging arrangements designed to accent outdoor living spaces.</p>
-                        </div>
-                        <a href="#contact" class="btn btn-outline btn-sm">Inquire Similar</a>
-                    </div>
-                </div>
-
-                <div class="gallery-card">
-                    <div class="gallery-img">
-                        <img src="image/tree.jpeg" alt="Mature Estate Landscaping">
-                    </div>
-                    <div class="gallery-content">
-                        <div>
-                            <h4>Mature Estate Landscaping</h4>
-                            <p>Full-scale property transformation featuring established shade trees, neat borders, and balanced softscaping.</p>
-                        </div>
-                        <a href="#contact" class="btn btn-outline btn-sm">Inquire Similar</a>
-                    </div>
-                </div>
-
-                <div class="gallery-card">
-                    <div class="gallery-img">
-                        <img src="image/grass2.jpeg" alt="Corporate Compound Landscaping">
-                    </div>
-                    <div class="gallery-content">
-                        <div>
-                            <h4>Corporate Compound Landscaping</h4>
-                            <p>Professional exterior styling, clean stone walkways, and pristine lawn layouts for commercial properties.</p>
-                        </div>
-                        <a href="#contact" class="btn btn-outline btn-sm">Inquire Similar</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="contact-wrapper">
-                <div class="contact-info-side">
-                    <div>
-                        <h3>Get In Touch With Our Landscaping Experts</h3>
-                        <p>Ready to bring your dream landscape to life or source bulk plants for your next project? Reach out to our team today for prompt assistance.</p>
-                        <ul class="info-list">
-                            <li><i class="fa-solid fa-phone"></i> <span>+254 724 576 718</span></li>
-                            <li><i class="fa-solid fa-envelope"></i> <span>info@lewidenlandscapes.co.ke</span></li>
-                            <li><i class="fa-solid fa-location-dot"></i> <span>Karen Main Office, Consolata Area, Nairobi</span></li>
-                        </ul>
-                    </div>
-                    <div style="margin-top: 30px;">
-                        <span class="location-tag" style="color: var(--muted-gold);">Working Hours</span>
-                        <p style="margin-bottom: 0;">Monday – Saturday: 8:00 AM – 5:00 PM</p>
-                    </div>
-                </div>
-
-                <div class="contact-form-side">
-                    <form action="#" method="POST">
-                        <div class="form-group">
-                            <label for="name">Your Full Name</label>
-                            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" class="form-control" placeholder="e.g. +254 712 345 678" required>
-                        </div>
-                  <div class="form-group">
-                            <label for="serviceRequested">Service / Inquiry Type</label>
-                            <select id="serviceRequested" class="form-control" required>
-                                <option value="" disabled selected>Select a service...</option>
-                                <option value="Residential Landscape Design">Residential Landscape Design</option>
-                                <option value="Commercial Softscaping & Hardscaping">Commercial Softscaping & Hardscaping</option>
-                                <option value="Premium Turf & Lawn Installation">Premium Turf & Lawn Installation</option>
-                                <option value="Water Features & Rock Gardens">Water Features & Rock Gardens</option>
-                                <option value="Scheduled Maintenance">Scheduled Maintenance</option>
-                                <option value="Wholesale Plant Nursery Supply">Wholesale Plant Nursery Supply</option>
-                                <option value="Custom Project Inquiry">Custom Project Inquiry</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Project Details / Message</label>
-                            <textarea id="message" class="form-control" placeholder="Tell us about your space or plant requirements..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-gold" style="width: 100%;">Send Inquiry</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">Lewiden Landscapers & Nurseries</div>
-                <div class="footer-links">
-                    <a href="#top">Home</a>
-                    <a href="#services">Services</a>
-                    <a href="#plant-shop">Plant Shop</a>
-                    <a href="#locations">Locations</a>
-                    <a href="#gallery">Gallery</a>
-                    <a href="#contact">Contact</a>
-                </div>
-            </div>
-            <p class="copyright">&copy; 2026 Lewiden Landscapers & Nurseries Nairobi. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <script>
+</div>
+</div>
+</div>
+</section>
+<section class="locations-section" id="locations">
+<div class="container">
+<div class="section-header">
+<span class="section-subtitle">Our Footprint</span>
+<h2 class="section-title">Visit Our Offices &amp; Plant Nurseries</h2>
+</div>
+<div class="locations-grid">
+<div class="location-card">
+<span class="location-tag">Design Headquarters</span>
+<h3>Karen Main Office</h3>
+<ul class="location-details">
+<li><i class="fa-solid fa-location-dot"></i> <span>Consolata Area / Near Brookhouse School, Karen, Nairobi</span></li>
+<li><i class="fa-solid fa-clock"></i> <span>Mon - Sat: 8:00 AM - 5:00 PM</span></li>
+<li><i class="fa-solid fa-comments"></i> <span>Landscape Design Consultations &amp; Site Planning</span></li>
+</ul>
+<a class="btn btn-forest btn-sm" href="#contact">Book Consultation</a>
+</div>
+<div class="location-card">
+<span class="location-tag">Retail Nursery</span>
+<h3>Bomas Nursery (Karen)</h3>
+<ul class="location-details">
+<li><i class="fa-solid fa-location-dot"></i> <span>Bomas of Kenya Environs, Langata / Karen Border</span></li>
+<li><i class="fa-solid fa-clock"></i> <span>Mon - Sun: 7:30 AM - 6:00 PM</span></li>
+<li><i class="fa-solid fa-seedling"></i> <span>Exotic flowers, mature palms, and ornamental shrubs</span></li>
+</ul>
+<a class="btn btn-forest btn-sm" href="#contact">Inquire Plants</a>
+</div>
+<div class="location-card">
+<span class="location-tag">Wholesale Propagation</span>
+<h3>Matasia Nursery</h3>
+<ul class="location-details">
+<li><i class="fa-solid fa-location-dot"></i> <span>Matasia Town Hub, Ngong / Kajiado Route</span></li>
+<li><i class="fa-solid fa-clock"></i> <span>Mon - Sat: 8:00 AM - 5:30 PM</span></li>
+<li><i class="fa-solid fa-boxes-stacked"></i> <span>Wholesale tree propagation, ground covers &amp; bulk turf</span></li>
+</ul>
+<a class="btn btn-forest btn-sm" href="#contact">Bulk Orders</a>
+</div>
+</div>
+</div>
+</section>
+<section class="gallery-section" id="gallery">
+<div class="container">
+<div class="section-header">
+<span class="section-subtitle" style="color: var(--muted-gold);">Our Portfolio</span>
+<h2 class="section-title">Recent Landscape Masterpieces</h2>
+</div>
+<div class="gallery-grid">
+<div class="gallery-card">
+<div class="gallery-img">
+<img alt="Veranda &amp; Patio Greenery Setup" src="image/hangingss.jpeg"/>
+</div>
+<div class="gallery-content">
+<div>
+<h4>Veranda &amp; Patio Greenery Setup</h4>
+<p>Elegant vertical planters and cascading hanging arrangements designed to accent outdoor living spaces.</p>
+</div>
+<a class="btn btn-outline btn-sm" href="#contact">Inquire Similar</a>
+</div>
+</div>
+<div class="gallery-card">
+<div class="gallery-img">
+<img alt="Mature Estate Landscaping" src="image/Mature Estate Landscaping.jpg"/>
+</div>
+<div class="gallery-content">
+<div>
+<h4>Mature Estate Landscaping</h4>
+<p>Full-scale property transformation featuring established shade trees, neat borders, and balanced softscaping.</p>
+</div>
+<a class="btn btn-outline btn-sm" href="#contact">Inquire Similar</a>
+</div>
+</div>
+<div class="gallery-card">
+<div class="gallery-img">
+<img alt="Corporate Compound Landscaping" src="image/grass2.jpeg"/>
+</div>
+<div class="gallery-content">
+<div>
+<h4>Corporate Compound Landscaping</h4>
+<p>Professional exterior styling, clean stone walkways, and pristine lawn layouts for commercial properties.</p>
+</div>
+<a class="btn btn-outline btn-sm" href="#contact">Inquire Similar</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="contact-section" id="contact">
+<div class="container">
+<div class="contact-wrapper">
+<div class="contact-info-side">
+<div>
+<h3>Get In Touch With Our Landscaping Experts</h3>
+<p>Ready to bring your dream landscape to life or source bulk plants for your next project? Reach out to our team today for prompt assistance.</p>
+<ul class="info-list">
+<li><i class="fa-solid fa-phone"></i> <span>+254 724 576 718</span></li>
+<li><i class="fa-solid fa-envelope"></i> <span>info@lewidenlandscapes.co.ke</span></li>
+<li><i class="fa-solid fa-location-dot"></i> <span>Karen Main Office, Consolata Area, Nairobi</span></li>
+</ul>
+</div>
+<div style="margin-top: 30px;">
+<span class="location-tag" style="color: var(--muted-gold);">Working Hours</span>
+<p style="margin-bottom: 0;">Monday – Saturday: 8:00 AM – 5:00 PM</p>
+</div>
+</div>
+<div class="contact-form-side">
+<form action="#" method="POST">
+<div class="form-group">
+<label for="name">Your Full Name</label>
+<input class="form-control" id="name" placeholder="Enter your name" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="phone">Phone Number</label>
+<input class="form-control" id="phone" placeholder="e.g. +254 712 345 678" required="" type="tel"/>
+</div>
+<div class="form-group">
+<label for="serviceRequested">Service / Inquiry Type</label>
+<select class="form-control" id="serviceRequested" required="">
+<option disabled="" selected="" value="">Select a service...</option>
+<option value="Residential Landscape Design">Residential Landscape Design</option>
+<option value="Commercial Softscaping &amp; Hardscaping">Commercial Softscaping &amp; Hardscaping</option>
+<option value="Premium Turf &amp; Lawn Installation">Premium Turf &amp; Lawn Installation</option>
+<option value="Water Features &amp; Rock Gardens">Water Features &amp; Rock Gardens</option>
+<option value="Scheduled Maintenance">Scheduled Maintenance</option>
+<option value="Wholesale Plant Nursery Supply">Wholesale Plant Nursery Supply</option>
+<option value="Custom Project Inquiry">Custom Project Inquiry</option>
+</select>
+</div>
+<div class="form-group">
+<label for="message">Project Details / Message</label>
+<textarea class="form-control" id="message" placeholder="Tell us about your space or plant requirements..."></textarea>
+</div>
+<button class="btn btn-gold" style="width: 100%;" type="submit">Send Inquiry</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<footer>
+<div class="container">
+<div class="footer-content">
+<div class="footer-logo">Lewiden Landscapers &amp; Nurseries</div>
+<div class="footer-links">
+<a href="#top">Home</a>
+<a href="#services">Services</a>
+<a href="#plant-shop">Plant nursery</a>
+<a href="#locations">Locations</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+<p class="copyright">© 2026 Lewiden Landscapers &amp; Nurseries Nairobi. All Rights Reserved.</p>
+</div>
+</footer>
+<script>
         // Mobile Menu Toggle
         const mobileToggle = document.getElementById('mobileToggle');
         const navMenu = document.getElementById('navMenu');
@@ -1306,7 +1405,87 @@
             });
         });
 
-        // Interactive Plant Shop Order Cart Logic
+        // Plant Search & View More Logic
+        const plantSearch = document.getElementById('plantSearch');
+        const plantCards = document.querySelectorAll('.plant-card');
+        const viewMorePlants = document.getElementById('viewMorePlants');
+        const viewMoreWrapper = document.querySelector('.view-more-wrapper');
+
+        const plantsPerPage = 4;
+        let plantsExpanded = false;
+
+        function setupPlantCatalog() {
+            plantCards.forEach((card, index) => {
+                if (index >= plantsPerPage) {
+                    card.classList.add('hidden-plant');
+                }
+            });
+
+            if (plantCards.length <= plantsPerPage) {
+                viewMoreWrapper.style.display = 'none';
+            }
+        }
+
+        setupPlantCatalog();
+
+        viewMorePlants.addEventListener('click', () => {
+            plantsExpanded = !plantsExpanded;
+
+            plantCards.forEach((card, index) => {
+                if (index >= plantsPerPage) {
+                    card.classList.toggle('hidden-plant', !plantsExpanded);
+                }
+            });
+
+            viewMorePlants.innerHTML = plantsExpanded
+                ? '<span>View Less</span><i class="fa-solid fa-chevron-up"></i>'
+                : '<span>View More Plants</span><i class="fa-solid fa-chevron-down"></i>';
+
+            if (!plantsExpanded) {
+                document.getElementById('plant-shop').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+
+        plantSearch.addEventListener('input', () => {
+            const searchTerm = plantSearch.value.toLowerCase().trim();
+
+            if (searchTerm === '') {
+                plantsExpanded = false;
+
+                plantCards.forEach((card, index) => {
+                    card.classList.toggle('hidden-plant', index >= plantsPerPage);
+                });
+
+                if (plantCards.length > plantsPerPage) {
+                    viewMoreWrapper.style.display = 'block';
+                }
+
+                viewMorePlants.innerHTML =
+                    '<span>View More Plants</span><i class="fa-solid fa-chevron-down"></i>';
+
+                return;
+            }
+
+            plantCards.forEach(card => {
+                const plantName = card.querySelector('h3').textContent.toLowerCase();
+                const plantDescription = card.querySelector('p').textContent.toLowerCase();
+                const plantPrice = card.querySelector('.plant-price').textContent.toLowerCase();
+
+                const matchesSearch =
+                    plantName.includes(searchTerm) ||
+                    plantDescription.includes(searchTerm) ||
+                    plantPrice.includes(searchTerm);
+
+                card.classList.toggle('hidden-plant', !matchesSearch);
+            });
+
+            viewMoreWrapper.style.display = 'none';
+        });
+
+        // Interactive Plant Nursery Order Cart Logic
         let selectedPlants = [];
 
         const addToListButtons = document.querySelectorAll('.add-to-list-btn');
@@ -1422,7 +1601,7 @@
 
             const encodedMessage = encodeURIComponent(message);
             const whatsappNumber = "254700000000"; // Replace with actual business WhatsApp number
-            window.open(`https://wa.me/${+254724576718}?text=${encodedMessage}`, '_blank');
+            window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
         });
     </script>
 </body>
